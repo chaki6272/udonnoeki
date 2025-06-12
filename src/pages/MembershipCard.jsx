@@ -26,7 +26,7 @@ function MemberCard() {
   };
 
   return (
-    <div className="member-card">
+    <div className="page-content">
       <h2>メンバーカード</h2>
       <p>現在のポイント：{points} pt</p>
       <button onClick={addPoints}>+10 ポイント</button>
