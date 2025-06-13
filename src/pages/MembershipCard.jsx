@@ -1,38 +1,25 @@
 import { useState, useEffect } from 'react';
 
-function MemberCard() {
+function MembershipCard() {
   const [points, setPoints] = useState(0);
 
-  // 初回マウント時にlocalStorageから読み込み
-  useEffect(() => {
+  const loadPoints = () => {
     const savedPoints = localStorage.getItem('memberPoints');
-    if (savedPoints) {
-      setPoints(Number(savedPoints));
-    }
+    setPoints(savedPoints ? Number(savedPoints) : 0);
+  };
+
+  // 初回読み込み
+  useEffect(() => {
+    loadPoints();
   }, []);
-
-  // ポイント加算
-  const addPoints = () => {
-    const newPoints = points + 10;
-    setPoints(newPoints);
-    localStorage.setItem('memberPoints', newPoints);
-  };
-
-  // ポイント減算（0未満にならないように）
-  const subtractPoints = () => {
-    const newPoints = Math.max(points - 10, 0);
-    setPoints(newPoints);
-    localStorage.setItem('memberPoints', newPoints);
-  };
 
   return (
     <div className="page-content">
       <h2>メンバーカード</h2>
       <p>現在のポイント：{points} pt</p>
-      <button onClick={addPoints}>+10 ポイント</button>
-      <button onClick={subtractPoints}>-10 ポイント</button>
+      <button onClick={loadPoints}>最新の状態に更新</button>
     </div>
   );
 }
 
-export default MemberCard;
+export default MembershipCard;
