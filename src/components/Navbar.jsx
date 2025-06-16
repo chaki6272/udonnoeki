@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'; // ← これが必要
+
 function Navbar() {
   const navStyle = {
     padding: '10px',
@@ -31,4 +33,5 @@ function Navbar() {
     </nav>
   );
 }
-export default Navbar; // ← これがないと default import は使えない
+
+export default Navbar;
