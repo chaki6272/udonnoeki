@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom'; // ← ここが重要！
 import Home from './pages/Home';
 import ShopInfo from './pages/ShopInfo';
 import MembershipCard from './pages/MembershipCard';
@@ -7,10 +7,9 @@ import Access from './pages/Access';
 import Navbar from './components/Navbar';
 import QrScanner from './pages/QrScanner';
 
-
 function App() {
   return (
-    <HashRouter> {/* ← ここ変更 */}
+    <HashRouter> {/* ← BrowserRouterから変更済み */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
