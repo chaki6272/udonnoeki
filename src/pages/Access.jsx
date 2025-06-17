@@ -1,3 +1,7 @@
+// 例：App.jsx や BarcodeScannerComponent.jsx など
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+
+
 function Access() {
   return (
      <div className="page-content">

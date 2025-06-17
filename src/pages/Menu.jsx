@@ -1,3 +1,7 @@
+// 例：App.jsx や BarcodeScannerComponent.jsx など
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+
+
 function Menu() {
   const menuItems = [
     { name: 'かけうどん／つけうどん／冷しうどん', price: 450 },

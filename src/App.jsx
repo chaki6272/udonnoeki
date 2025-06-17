@@ -7,6 +7,10 @@ import Access from './pages/Access';
 import Navbar from './components/Navbar';
 import QrScanner from './pages/QrScanner';
 
+// 例：App.jsx や BarcodeScannerComponent.jsx など
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+
+
 function App() {
   return (
     <HashRouter> {/* ← BrowserRouterから変更済み */}

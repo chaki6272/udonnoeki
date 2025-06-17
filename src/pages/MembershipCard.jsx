@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 
+// 例：App.jsx や BarcodeScannerComponent.jsx など
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+
+
 function MembershipCard() {
   const [points, setPoints] = useState(0);
 

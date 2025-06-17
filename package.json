@@ -13,6 +13,7 @@
     "@capacitor-community/barcode-scanner": "^4.0.1",
     "@capacitor/android": "^7.3.0",
     "@capacitor/core": "^7.3.0",
+    "@zxing/library": "^0.21.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2"
