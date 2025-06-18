@@ -7,10 +7,16 @@ function QrScanner() {
   const [scanning, setScanning] = useState(false);
   const [points, setPoints] = useState(0);
 
+  // ✅ 初期化 & アンマウント時のクリーンアップ
   useEffect(() => {
-    // 初期化時にlocalStorageからポイントを取得
     const savedPoints = parseInt(localStorage.getItem('points')) || 0;
     setPoints(savedPoints);
+
+    return () => {
+      // 🔴 ページ移動などでこのコンポーネントが消える時に実行される
+      BarcodeScanner.showBackground();
+      BarcodeScanner.stopScan();
+    };
   }, []);
 
   const hasScannedToday = () => {
