@@ -24,7 +24,7 @@ function Access() {
       <div style={{ maxWidth: "100%", height: "400px", marginBottom: "1rem" }}>
         <iframe
           title="地図"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.1729462470226!2d138.8437055764476!3d35.519559372622474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601953e10ebd3705%3A0xd23cb4b6d947f1f7!2z44GC44GK44Gm44GE5LuY5p2x5LiK5bCP5LqU!5e0!3m2!1sja!2sjp!4v1717650109577!5m2!1sja!2sjp"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.0977392657446!2d138.84918561275148!3d35.526582272523434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019678f07f54e9d%3A0x2a14b0a75772534d!2z44GG44Gp44KT44Gu6aeFIOilv-ahguW6lw!5e0!3m2!1sja!2sjp!4v1750311079112!5m2!1sja!2sjp"
           width="100%"
           height="100%"
           style={{ border: 0 }}
