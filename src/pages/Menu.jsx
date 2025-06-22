@@ -1,31 +1,58 @@
-// 例：App.jsx や BarcodeScannerComponent.jsx など
-import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
-
+// src/pages/Menu.jsx
+import kakeImg from '../assets/img/L/kake_L.jpg';
+// 他の画像も順次 import していく（例：import bukkakeImg from '../assets/img/L/bukkake_L.jpg'; など）
 
 function Menu() {
-  const menuItems = [
-    { name: 'かけうどん／つけうどん／冷しうどん', price: 450 },
-    { name: '肉うどん／肉つけ／肉冷し', price: 630 },
-    { name: 'きんぴら／きんぴらつけ／きんぴら冷し', price: 570 },
-    { name: '山菜／山菜つけ／山菜冷し', price: 570 },
-    { name: '牛すじカレーうどん', price: 660 },
-    { name: '肉汁うどん', price: 760 },
-    { name: '牛すじカレーライス', price: 600 },
-    { name: '鴨汁うどん', price: 960 },
-    { name: 'いなり寿司（2個）', price: 150 },
-  ];
-
   return (
-     <div className="page-content">
-      <h1>メニュー</h1>
-      <ul>
-        {menuItems.map((item, index) => (
-          <li key={index}>
-            {item.name}：{item.price}円
-          </li>
-        ))}
-      </ul>
-      <p>※ すべて並盛価格。大盛は＋130円となります。</p>
+    <div className="menu-container" style={{ maxWidth: '400px', margin: '0 auto' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <tbody>
+
+          {/* 🍜 メニュー①：かけうどん */}
+          <tr>
+            <td style={{ width: '120px' }}>
+              <img src={kakeImg} alt="かけうどん" style={{ width: '100%' }} />
+            </td>
+            <td style={{ paddingLeft: '10px' }}>
+              <div style={{ fontWeight: 'bold', fontSize: '16px' }}>かけうどん</div>
+              <div>
+                <span style={{ backgroundColor: '#e0ffe0', padding: '2px 4px' }}>みそ味</span> または
+                <span style={{ backgroundColor: '#e0ffe0', padding: '2px 4px' }}>しょうゆ味</span> をお選び下さい。
+              </div>
+              <div>
+                並盛：<span className="price">450</span>円<br />
+                <small>※大盛は130円増しとなります。</small>
+              </div>
+            </td>
+          </tr>
+          <tr><td colSpan="2"><hr /></td></tr>
+
+          {/* ⬇⬇⬇ ここから下に、別のメニュー項目を追加していく ⬇⬇⬇ */}
+
+          {/* 🍜 メニュー②：ぶっかけうどん（例） */}
+          {/*
+          <tr>
+            <td style={{ width: '120px' }}>
+              <img src={bukkakeImg} alt="ぶっかけうどん" style={{ width: '100%' }} />
+            </td>
+            <td style={{ paddingLeft: '10px' }}>
+              <div style={{ fontWeight: 'bold', fontSize: '16px' }}>ぶっかけうどん</div>
+              <div>
+                温／冷 をお選びいただけます。
+              </div>
+              <div>
+                並盛：<span className="price">480</span>円<br />
+                <small>※大盛は130円増しとなります。</small>
+              </div>
+            </td>
+          </tr>
+          <tr><td colSpan="2"><hr /></td></tr>
+          */}
+
+          {/* ⬆⬆⬆ 上記のブロックをコピーして、メニュー数に応じて増やしてください ⬆⬆⬆ */}
+
+        </tbody>
+      </table>
     </div>
   );
 }

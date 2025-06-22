@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // ← これが必要
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const navStyle = {
@@ -25,7 +25,7 @@ function Navbar() {
       <ul style={ulStyle}>
         <li style={liStyle}><Link to="/">ホーム</Link></li>
         <li style={liStyle}><Link to="/shop">店舗情報</Link></li>
-        <li style={liStyle}><Link to="/card">メンバーカード</Link></li>
+        <li style={liStyle}><Link to="/pointcard">ポイントカード</Link></li>
         <li style={liStyle}><Link to="/menu">メニュー</Link></li>
         <li style={liStyle}><Link to="/access">アクセス</Link></li>
         <li style={liStyle}><Link to="/scan">QRスキャン</Link></li>
