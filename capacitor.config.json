@@ -3,3 +3,14 @@
   "appName": "うどんの駅",
   "webDir": "dist"
 }
+{
+  "plugins": {
+    "assets": {
+      "android": {
+        "icon": {
+          "source": "src/assets/udon_logo.png"
+        }
+      }
+    }
+  }
+}
