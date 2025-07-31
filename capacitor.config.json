@@ -1,9 +1,7 @@
 {
   "appId": "com.example.app",
   "appName": "うどんの駅",
-  "webDir": "dist"
-}
-{
+  "webDir": "dist",
   "plugins": {
     "assets": {
       "android": {
