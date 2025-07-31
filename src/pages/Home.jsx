@@ -1,58 +1,20 @@
-import { useEffect } from "react";
-import "../assets/slide/slideshow.css";
-import "../assets/style/style.unified.css";
-import "../assets/mv/gm_css.css";
-import "../assets/scrollin/fadein.css";
+// 例：App.jsx や BarcodeScannerComponent.jsx など
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 
-export default function Home() {
-  useEffect(() => {
-    const loadScript = (src) => {
-      const script = document.createElement("script");
-      script.src = src;
-      script.async = false;
-      document.body.appendChild(script);
-    };
 
-    loadScript("/js/include-common.js");
-    loadScript("/js/slideshow.js");
-    loadScript("/js/slide-init.js");
-
-    return () => {
-      // Cleanup if necessary
-    };
-  }, []);
-
+function Home() {
   return (
-    <div className="container">
-      {/* Header */}
-      <div id="header-include"></div>
-
-      {/* Main Visual Section */}
-      <section className="main-visual">
-        <div className="slideshow-container">
-          <div className="slideshow fade">
-            <img src={require("../assets/img/slide/slide1.jpg")} alt="Slide 1" />
-          </div>
-          <div className="slideshow fade">
-            <img src={require("../assets/img/slide/slide2.jpg")} alt="Slide 2" />
-          </div>
-          <div className="slideshow fade">
-            <img src={require("../assets/img/slide/slide3.jpg")} alt="Slide 3" />
-          </div>
-        </div>
-      </section>
-
-      {/* Content Sections */}
-      <section className="intro">
-        <h2>うどんの駅へようこそ</h2>
-        <p>ここに簡単な紹介文が入ります。素材へのこだわり、製法など。</p>
-      </section>
-
-      {/* Footer */}
-      <div id="footer-include"></div>
-
-      {/* Bottom Navigation */}
-      <div id="bottom-nav-include"></div>
+     <div className="page-content">
+      <h1>うどんの駅 西桂店</h1>
+      <p>富士山の湧水を使った自家製麺。味噌・醤油のつゆからお選びいただけます。</p>
+      <h2>営業時間</h2>
+      <p>11:00～20:00（定休日：1月1日）</p>
+      <h2>住所</h2>
+      <p>山梨県南都留郡西桂町小沼1112-1</p>
+      <h2>連絡先</h2>
+      <p>電話：0555-29-2040<br/>メール：udon@kk-tsuruta.jp</p>
     </div>
   );
 }
+
+export default Home;
